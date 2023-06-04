@@ -23,11 +23,11 @@ You need clearly understand how resource identified on each level to avoid unexp
 Proper resource identifiers also make your code maintainable and readable.
 
 The code examples in this article are based on Azure provider. But the same concepts are applicable for other providers.
-The link to code examples: https://github.com/musukvl/article-terraform-resource-identification
+The link to code examples: https://github.com/musukvl/article_resource-identification-in-terraform
 
 ## Resource identifier in case of single resource
 
-Let`s check the [simple example](https://github.com/musukvl/article-terraform-resource-identification/blob/master/001-basic-example/main.tf) of azure storage account created with Terraform and track resource identification on each level:
+Let's check the [simple example](https://github.com/musukvl/article_resource-identification-in-terraform/blob/master/001-basic-example/main.tf) of azure storage account created with Terraform and track resource identification on each level:
 
 Resource definition in .tf-file code level is:
 
@@ -59,6 +59,7 @@ In the terraform state the storage account is identified with `type` and `name` 
   } 
 ]           
 ```
+
 Full example of state file is [here](https://github.com/musukvl/article-terraform-resource-identification/blob/master/001-basic-example/terraform.tfstate.json).
 
 Actual storage account has `/subscriptions/xxxxx/resourceGroups/ary-app-rg/providers/Microsoft.Storage/storageAccounts/aryappsa` id in Azure cloud.   
@@ -142,4 +143,4 @@ resources: [
 
 Full example of state file is [here](https://github.com/musukvl/article-terraform-resource-identification/blob/master/002-for_each/terraform.tfstate.json).
 
-3. Actual storage accounts have `/subscriptions/xxxxx/resourceGroups/ary-app-rg/providers/Microsoft.Storage/storageAccounts/aryappsa` and `/subscriptions/xxxxx/resourceGroups/ary-app-rg/providers/Microsoft.Storage/storageAccounts/aryemailsendersvc` ids in Azure cloud.
+Actual storage accounts have `/subscriptions/xxxxx/resourceGroups/ary-app-rg/providers/Microsoft.Storage/storageAccounts/aryappsa` and `/subscriptions/xxxxx/resourceGroups/ary-app-rg/providers/Microsoft.Storage/storageAccounts/aryemailsendersvc` ids in Azure cloud.
