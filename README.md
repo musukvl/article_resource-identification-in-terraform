@@ -1,8 +1,8 @@
 ---
 title: Terraform resources identification
 published: false
-description: An article used to test pushing to Dev.to
-tags: terraform
+description: The article describes how resources indentified on each level of Terraform.
+tags: terraform, hcl
 cover_image: ./assets/logo1.jpg
 canonical_url: null
 id: 1491602
