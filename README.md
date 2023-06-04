@@ -14,7 +14,7 @@ id: 1491602
 
 Each resource created with Terraform present on three levels:
 
-1. Resource has definition in .tf-file as `resource` block.
+1. Resource has definition in terraform code as `resource` block.
 2. Created resource has record in Terraform state file.
 3. Resource is also actual resource created in a cloud.
 
